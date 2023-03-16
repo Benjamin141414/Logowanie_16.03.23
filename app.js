@@ -19,11 +19,8 @@ function checkLogin(){
 
 function checkAdmin(){
     const admin = localStorage.getItem("login")
-
-    if(window.location.href = "admin.html"){
-
+    
     if(admin != "admin"){
         window.location.href = "login.html"
-    }
     }
 }
