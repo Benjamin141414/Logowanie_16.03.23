@@ -13,10 +13,10 @@ const users = [
 
 //endpoint do sprawdzania czy mamy takiego user-a
 app.get("/logowanie/:uzytkownik/:password", (req, res)=>{      
-    const uzytkownik = req.params.uzytkownik
-    const password = req.params.password
+    const user = req.params.uzytkownik
+    const pass = req.params.password
 
-    for(let i=0; i<=users.lenght-1; i++){
+    for(let i=0; i<=users.length-1; i++){
         if(users[i].user==user && users[i].pass == pass){
             res.send({user: user, uprawnienia: users[i].uprawnienia})
         }
@@ -24,6 +24,6 @@ app.get("/logowanie/:uzytkownik/:password", (req, res)=>{
         res.json({satus: "niezalogowano"})
 })
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log("Aplikacja działa")
 })
