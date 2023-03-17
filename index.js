@@ -5,9 +5,16 @@ const app = express()
 const port = 3000
 app.use(cors())
 
-app.get("/logowanie/:password/:admin", function(req, res){      
+const users = [
+    {user: "admin", pass:"admin", uprawnienia:"admin"},
+    {user: "user", pass:"user", uprawnienia:"user"},
+    {user: "Jan", pass:"Kowalski", uprawnienia:"user"}
+]
+
+//endpoint do sprawdzania czy mamy takiego user-a
+app.get("/logowanie/:uzytkownik/:password", (req, res)=>{      
+    const uzytkownik = req.params.uzytkownik
     const password = req.params.password
-    const admin = req.params.admin
 })
 
 app.listen(3000, ()=>{
