@@ -15,3 +15,14 @@ async function getUser(){
         localStorage.setItem("upr", "false")
     }
 }
+
+
+function checkUser(){
+    const user = JSON.parse(localStorage.getItem("upr"))
+
+    const url = window.location.href
+
+    if(user.upr != "admin" && url.includes("admin.html")){
+        window.location.href = "index.html"
+    }
+}
