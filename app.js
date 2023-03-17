@@ -25,4 +25,8 @@ function checkUser(){
     if(user.upr != "admin" && url.includes("admin.html")){
         window.location.href = "index.html"
     }
+
+    if((user.upr != "user" || user.upr!="admin")  &&  url.includes("user.html")){
+        
+    }
 }
