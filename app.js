@@ -1,5 +1,4 @@
 
-
 async function getUser(){
     const login = document.getElementById("login").value
     const password = document.getElementById("password").value
