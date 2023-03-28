@@ -22,10 +22,10 @@ function checkUser(){
     const url = window.location.href
 
     if(user.upr != "admin" && url.includes("admin.html")){
-        window.location.href = "index.html"
+        window.location.href = "login.html"
     }
 
     if((user.upr != "user" || user.upr!="admin")  &&  url.includes("user.html")){
-        
+        window.location.href = "login.html"
     }
 }
