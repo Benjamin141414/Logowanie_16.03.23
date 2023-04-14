@@ -1,4 +1,5 @@
 
+
 async function getUser(){
     const login = document.getElementById("login").value
     const password = document.getElementById("password").value
@@ -23,19 +24,11 @@ function checkUser(){
 
     const url = window.location.href
 
-<<<<<<< HEAD
     if(user.uprawnienia != "admin" && url.includes("admin.html")){  //url includes sprawdza aktualną strone i moze przekierowac na strone
         window.location.href = "login.html"
     }
 
     if((user.uprawnienia != "user" || user.upr!="admin")  &&  url.includes("user.html")){
-=======
-    if(user.upr != "admin" && url.includes("admin.html")){
-        window.location.href = "login.html"
-    }
-
-    if((user.upr != "user" || user.upr!="admin")  &&  url.includes("user.html")){
->>>>>>> ad0128b1e7ac69a1a96f2ec9df5269ff8145cbc9
         window.location.href = "login.html"
     }
 
