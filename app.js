@@ -18,18 +18,17 @@ async function getUser(){
 
 
 function checkUser(){
-    const user = JSON.parse(localStorage.getItem("uprawnienia"))/*Formatuje w JSON i pobiera dane z tego klucza upr z localstorage
+    const user = JSON.parse(localStorage.getItem("upr"))/*Formatuje w JSON i pobiera dane z tego klucza upr z localstorage
                                                          i to tylko po to zeby bylo w formacie json a nie zapisane jako format string*/
     console.log(user)
 
     const url = window.location.href
 
-    if(user != "admin" && url.includes("admin.html")){  //url(zmienna) includes sprawdza aktualną strone
+    if(user.uprawnienia != "admin" && url.includes("admin.html")){  //url(zmienna) includes sprawdza aktualną strone
         window.location.href = "login.html"
     }
 
-    if((user != "user" || user != "admin")  &&  url.includes("user.html")){
+    if((user.uprawnienia != "user" && user.uprawnienia != "admin")  &&  url.includes("user.html")){
         window.location.href = "login.html"
     }
-
 }
