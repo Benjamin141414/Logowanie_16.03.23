@@ -28,7 +28,7 @@ function checkUser(){
         window.location.href = "login.html"
     }
 
-    if((user.uprawnienia != "user" && user.uprawnienia != "admin")  &&  url.includes("user.html")){
-        window.location.href = "login.html"
+    if((user.uprawnienia == "user" || user.uprawnienia == "admin")  &&  url.includes("login.html")){ //jak tu sie da user.html to przegladarka bedzie sie odswiezala ciagle
+        window.location.href = "user.html"
     }
 }
