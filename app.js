@@ -24,11 +24,11 @@ function checkUser(){
 
     const url = window.location.href
 
-    if(user.uprawnienia != "admin" && url.includes("admin.html")){  //url(zmienna) includes sprawdza aktualną strone
+    if(user != "admin" && url.includes("admin.html")){  //url(zmienna) includes sprawdza aktualną strone
         window.location.href = "login.html"
     }
 
-    if((user.uprawnienia != "user" || user.uprawnienia!="admin")  &&  url.includes("user.html")){
+    if((user != "user" || user != "admin")  &&  url.includes("user.html")){
         window.location.href = "login.html"
     }
 
