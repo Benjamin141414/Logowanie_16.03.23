@@ -18,7 +18,7 @@ async function getUser(){
 
 
 function checkUser(){
-    const user = JSON.parse(localStorage.getItem("upr"))/*Formatuje w JSON i pobiera dane z tego klucza upr z localstorage
+    const user = JSON.parse(localStorage.getItem("uprawnienia"))/*Formatuje w JSON i pobiera dane z tego klucza upr z localstorage
                                                          i to tylko po to zeby bylo w formacie json a nie zapisane jako format string*/
     console.log(user)
 
